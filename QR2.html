@@ -1,18 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Ma Trận Chữ Cái 5x5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #333;
+            font-size: 24px;
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box">
-            <div class="1">
-                
-            </div>
-        </div>
-    </div>
+    <table id="matrix"></table>
+
+    <script>
+        function generateRandomLetter() {
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            return letters.charAt(Math.floor(Math.random() * letters.length));
+        }
+
+        function createMatrix(rows, cols) {
+            const table = document.getElementById('matrix');
+            for (let i = 0; i < rows; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < cols; j++) {
+                    const cell = document.createElement('td');
+                    cell.textContent = generateRandomLetter();
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+        }
+
+        createMatrix(5, 5);
+    </script>
 </body>
 </html>
