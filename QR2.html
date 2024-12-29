@@ -30,9 +30,11 @@
     <table id="matrix"></table>
 
     <script>
+        // Tùy chỉnh các chữ cái bạn muốn sử dụng
+        const customLetters = 'ABCDE'; // Thay đổi chuỗi này theo ý muốn
+
         function generateRandomLetter() {
-            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            return letters.charAt(Math.floor(Math.random() * letters.length));
+            return customLetters.charAt(Math.floor(Math.random() * customLetters.length));
         }
 
         function createMatrix(rows, cols) {
