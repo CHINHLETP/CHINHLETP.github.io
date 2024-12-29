@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alien Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkPassword() {
+            var password = prompt("Nhập mật khẩu để truy cập trang:");
+            if (password === "ZORGON") {
+                document.getElementById("content").style.display = "block"; // Hiện nội dung
+            } else {
+                alert("Mật khẩu không chính xác!");
+                window.location.href = "index.html"; // Chuyển hướng về trang chính
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="container">
+<body onload="checkPassword()">
+    <div class="container" id="content" style="display: none;">
         <header>
             <h1>THÔNG TIN MẬT</h1>
         </header>
         <div class="profile">
-            <img src="/image.jpg/" alt="Alien Image" class="alien-image">
+            <img src="/image.jpg" alt="Alien Image" class="alien-image">
             <h2>Tên: Zorgon</h2>
             <p><strong>Giống loài:</strong> </p>
-            <p><strong>Nguồn gốc:</strong>Hành tinh Zogara</p>
+            <p><strong>Nguồn gốc:</strong> Hành tinh Zogara</p>
             <p><strong>Tuổi:</strong> 300</p>
             <p><strong>Đặc điểm nhận dạng:</strong></p>
             <p><strong>Đồ uống yêu thích:</strong> </p>
