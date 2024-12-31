@@ -37,6 +37,10 @@ h1 {
     border: 5px solid #00ff00;
 }
 
+.LOITHOAI {
+    color: red;
+}
+
 footer {
     margin-top: 20px;
     font-size: 0.8em;
