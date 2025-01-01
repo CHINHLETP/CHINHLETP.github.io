@@ -27,30 +27,42 @@
     </style>
 </head>
 <body>
-    <table id="matrix"></table>
-
-    <script>
-        // Tùy chỉnh các chữ cái bạn muốn sử dụng
-        const customLetters = 'ABCDE'; // Thay đổi chuỗi này theo ý muốn
-
-        function generateRandomLetter() {
-            return customLetters.charAt(Math.floor(Math.random() * customLetters.length));
-        }
-
-        function createMatrix(rows, cols) {
-            const table = document.getElementById('matrix');
-            for (let i = 0; i < rows; i++) {
-                const row = document.createElement('tr');
-                for (let j = 0; j < cols; j++) {
-                    const cell = document.createElement('td');
-                    cell.textContent = generateRandomLetter();
-                    row.appendChild(cell);
-                }
-                table.appendChild(row);
-            }
-        }
-
-        createMatrix(5, 5);
-    </script>
+    <table id="matrix">
+        <tr>
+            <td>A</td>
+            <td>H</td>
+            <td>I</td>
+            <td>I</td>
+            <td>L</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>O</td>
+            <td>C</td>
+            <td>H</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>I</td>
+            <td>B</td>
+            <td>P</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>P</td>
+            <td>N</td>
+            <td>B</td>
+            <td>I</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>K</td>
+            <td>J</td>
+            <td>R</td>
+            <td>E</td>
+        </tr>
+    </table>
 </body>
 </html>
